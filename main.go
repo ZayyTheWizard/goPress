@@ -2,7 +2,11 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
+
+	EnFile "github.com/ZayyTheWizard/goPress/FileHandling"
+	huffman "github.com/ZayyTheWizard/goPress/Huffman"
 )
 
 // Driver
@@ -19,11 +23,15 @@ func main() {
 		os.Exit(255) // Exit code 255 for invalid format
 	}
 
-	fmt.Println(fileName)
-
 	switch encodeOrDecode := os.Args[2]; encodeOrDecode {
 	case "encode":
 		fmt.Println("encode")
+		fileContent, err := EnFile.FetchFileContent(fileName)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		huffman.Encode(fileContent)
 	case "decode":
 		fmt.Println("decode")
 	default:
