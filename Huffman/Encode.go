@@ -1,6 +1,7 @@
 package huffman
 
 import (
+	"fmt"
 	"sort"
 )
 
@@ -37,6 +38,8 @@ func Encode(Content string) (string, error) {
 
 	// Sort table Decending order
 	sortedTable := sortMapByValue(table)
+
+	fmt.Println(sortedTable)
 
 	// Build Tree
 	buildHuffmanTree(Content)
