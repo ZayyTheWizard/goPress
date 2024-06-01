@@ -1,7 +1,6 @@
 package huffman
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -39,13 +38,14 @@ func Encode(Content string) (string, error) {
 	// Sort table
 	sortedTable := sortMapByValue(table)
 
-	fmt.Println(sortedTable)
-
 	// Build Tree
-	buildHuffmanTree(Content)
+	huffmanTree := buildHuffmanTree(sortedTable, len(sortedTable))
 
+	printTree(huffmanTree)
 	// Encode using Tree
 
-	// Return encode string
+	// Searilize Tree
+
+	// Return Encoded string and searilized Tree
 	return "", nil
 }
