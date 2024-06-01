@@ -11,7 +11,6 @@ func Encode(Content string) (string, error) {
 	table := buildTable(Content)
 
 	// Sort table Decending order
-
 	keys := make([]rune, 0, len(table))
 
 	for key := range table {
