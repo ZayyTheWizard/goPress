@@ -46,6 +46,6 @@ func Encode(Content string) (string, error) {
 
 	// Searilize Tree
 
-	// Return Encoded string and searilized Tree
+	// Return Encoded string and searilized Tree Concatinated
 	return "", nil
 }
