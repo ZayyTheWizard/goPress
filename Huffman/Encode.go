@@ -36,7 +36,7 @@ func Encode(Content string) (string, error) {
 	// Build Frequency Table
 	table := buildTable(Content)
 
-	// Sort table Decending order
+	// Sort table
 	sortedTable := sortMapByValue(table)
 
 	fmt.Println(sortedTable)
