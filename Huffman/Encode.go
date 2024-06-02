@@ -42,7 +42,6 @@ func Encode(Content string) (string, error) {
 	// Build Tree
 	huffmanTree := buildHuffmanTree(sortedTable, len(sortedTable))
 
-	printTree(huffmanTree)
 	// Encode using Tree
 	encoded := encodeWithTree(huffmanTree, Content)
 	fmt.Printf("%c", encoded)
