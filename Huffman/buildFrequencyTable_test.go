@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func testBuildTable(t *testing.T) {
+func TestBuildTable(t *testing.T) {
 	var Test = []struct {
 		input string
 		want  map[rune]int
