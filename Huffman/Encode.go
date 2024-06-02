@@ -1,6 +1,7 @@
 package huffman
 
 import (
+	"fmt"
 	"sort"
 )
 
@@ -43,7 +44,8 @@ func Encode(Content string) (string, error) {
 
 	printTree(huffmanTree)
 	// Encode using Tree
-
+	encoded := encodeWithTree(huffmanTree, Content)
+	fmt.Printf("%c", encoded)
 	// Searilize Tree
 
 	// Return Encoded string and searilized Tree Concatinated
